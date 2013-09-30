@@ -1,0 +1,12 @@
+!!!xml
+rss(version='2.0')
+  channel  
+    title #{site_title}
+    twitter #{twitter}
+    link #{site_url}/
+    each post, slug in public.courses.data
+      item
+        title #{post.title}
+        date #{post.date}
+        link #{site_url}/posts/#{slug}
+        content <![CDATA[!{ partial("courses/" + slug) }]]>

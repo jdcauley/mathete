@@ -1,0 +1,12 @@
+each post, slug in public.courses.data
+  
+  h2.post-title
+    a(href="#{ site_url }/posts/#{ slug }") #{ post.title }
+  h4.subtitle #{ post.subtitle }
+  time #{ post.date }
+  hr
+  !{ partial("courses/" + slug) }
+
+// section
+  .container
+    #feed.row

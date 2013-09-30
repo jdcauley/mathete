@@ -1,0 +1,203 @@
+@import '_bootstrap/bootstrap.less';
+
+/* Variables */
+
+@white: #fff;
+
+/* Mixins */
+.center{
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.radius (@radius: 50%){
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+
+
+/* HTML Elements */
+
+body{
+
+}
+header{
+  background: @brand-primary;
+  min-height: 180px;
+  background-size: cover;
+  color: @white;
+  .profile-img{
+    float: right;
+    max-width: 200px;
+    margin-bottom: -100px;
+   .radius;
+    box-sizing: border-box;
+    margin-top: 30px;  }
+}
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+/* Head 
+
+header{
+  height: 10px;
+  width: 100%;
+  background: @brand-primary;
+  margin-bottom: 40px;
+}
+*/
+/* Post */
+.main{
+  h2{
+    padding: 40px 0 0;
+    border-top: 1px solid @brand-primary;
+    &:first-child{
+      border-top: none;
+    }
+  }
+}
+.subtitle{
+  margin-top: 0;
+}
+.post {
+  margin-bottom: 50px;
+  h2, h1 {
+    margin-top: 0;
+  }
+  h1 {
+    margin-bottom: 20px;
+  }
+  width: 100%;
+  .clearfix();
+}
+.post-meta {
+  margin-top: 0.5em;
+  float: left;
+  color: darken(#f4f4f4, 15%);
+  text-align: center;
+}
+.post-type {
+  color: darken(#f4f4f4, 8%);
+  padding: 10px 0 15px;
+  margin-bottom: .5em;
+  border-bottom: darken(#f4f4f4, 0%) solid 1px;
+}
+.post-date {
+  // background: darken(#f4f4f4, 8%);
+  padding: 5px 0;
+  color: darken(#f4f4f4, 8%);
+  .month,
+  .day,
+  .year {
+    display: block;
+    line-height: 1em;
+    text-transform: uppercase;
+  }
+  .month {
+    font-size: 18px;
+  }
+  .day {
+    font-size: 30px;
+  }
+}
+.post-content {
+}
+.comments{
+  margin-top: 50px;
+}
+.post {
+  &.post-quote {
+    h1, h2 {
+      font-style: italic;
+    }
+    .post-content {
+      p {
+        font-style: italic;
+      }
+    }
+  }
+  &.post-image {
+    h1, h2 {
+      img {
+        border: #f4f4f4 solid 5px;
+      }
+    }
+    .post-content {
+
+    }
+  }
+  &.post-tweet {
+    .post-content {
+      h2 {
+        font-style: italic;
+      }
+    }
+  }
+}
+
+/* Sidebar/Aside */
+.aside{
+  margin-top: 40px;
+  .brand{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  p{
+    text-align: center;
+  }
+}
+.aside-img {
+  .center;
+  max-width: 200px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  margin-top: 30px;
+}
+
+.nav-home {
+  display: block;
+  border: #f4f4f4 solid 1px;
+  border-left: none;
+  border-right: none;
+  padding: 10px 0;
+  margin: -10px 0 20px;
+}
+
+/* Footer */
+
+footer{
+  .copyright{
+    font-size: 12px;
+  }
+}
+
+
+
+/*  Media Queries
+    Extra small devices (phones, up to 480px) No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm){
+  .aside-img {
+    float: right;
+    margin-left: none;
+    margin-right: none;
+  }
+  .aside{
+    margin-top: 40px;
+    p{
+      text-align: right;
+    }
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md){}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg){}
